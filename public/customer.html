@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer - Fast Food Ordering</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="/images/logo.png" alt="Logo" class="logo">
+        <h1>Fast Food Ordering System</h1>
+    </header>
+
+    <nav class="nav-container">
+        <button onclick="showCategory('burgers')">Burgers</button>
+        <button onclick="showCategory('fries')">French Fries</button>
+        <button onclick="showCategory('drinks')">Drinks</button>
+    </nav>
+
+    <div id="menu" class="menu"></div>
+
+    <!-- Hamburger Menu for Cart -->
+    <div class="hamburger-menu">
+        <button class="hamburger-btn" onclick="toggleCart()">&#9776; Your Cart</button>
+        <div id="cart" class="cart"></div>
+    </div>
+
+    <script src="/js/customer.js"></script>
+    <script>
+        function toggleCart() {
+            const cart = document.getElementById('cart');
+            cart.classList.toggle('show-cart');
+        }
+    </script>
+</body>
+
+</html>
